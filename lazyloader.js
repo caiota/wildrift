@@ -30,7 +30,6 @@ function closeNav() {
     //setTimeout(function(){document.getElementById("mySidenav").style.display="none";},600);
 }
 
-
 function dark(){
 atual=document.getElementsByClassName('darkMode')[0].id;
 itens= document.body.querySelectorAll('.sucessoAlert, .erroAlert, .avisoAlert, .button, iframe, #item');
