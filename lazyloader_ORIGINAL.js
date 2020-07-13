@@ -274,7 +274,7 @@ function lazyLoadApp() {
                             socialitapi = document.createElement('script');
                             socialitapi.setAttribute('type', 'text/javascript');
                             socialitapi.setAttribute('id', 'socialit');
-                            socialitapi.setAttribute('src', 'https://cdn.jsdelivr.net/gh/caiota/socialitjs@0.45/socialit.min.js');
+                            socialitapi.setAttribute('src', 'https://cdn.jsdelivr.net/gh/caiota/socialitjs@0.46/socialit.min.js');
                             head.appendChild(socialitapi);
 
                             lazySocialit.target.onload = function(c) {
