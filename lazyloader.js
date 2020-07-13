@@ -1,3 +1,162 @@
+function home(){
+    location.href="https://wildrift.tk/";
+}
+function hideAlerta(click){
+document.getElementsByClassName('captchaAlerta')[0].id="item";
+document.getElementsByClassName('captchaAlerta')[0].className="visto";
+if(document.getElementById("cookies")){
+document.getElementById("cookies").style.display="block";
+}
+loadDarkness();
+    if(click==true){
+setC('cookies',1,7);
+}
+}
+if(getC('cookies')==1){
+	hideAlerta(false);
+document.getElementById("cookies").style.display="none";
+}
+function openNav() {
+    
+ // document.getElementById("mySidenav").style.display="inline-block";
+  document.getElementById("mySidenav").style.width = "60%";
+  document.getElementById("menu").style.display="none";
+ 
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("menu").style.display="block";
+    //setTimeout(function(){document.getElementById("mySidenav").style.display="none";},600);
+}
+
+
+function dark(){
+atual=document.getElementsByClassName('darkMode')[0].id;
+itens= document.body.querySelectorAll('.sucessoAlert, .erroAlert, .avisoAlert, .button, iframe, #item');
+switch(atual){
+case 'white':    
+
+    if( document.getElementsByClassName('background')[0]){
+   document.getElementsByClassName('background')[0].dataset.tema="dark";
+    }
+setC('tema','black',90);
+   document.body.dataset.tema="dark";
+   
+  
+   if(itens){
+       itens.forEach(function(ar){
+           ar.dataset.tema="dark";
+          });
+   }
+   document.getElementsByClassName('darkMode')[0].querySelector('img').src="https://wildrift.tk/imagens/sun.webp";
+   document.getElementsByClassName('darkMode')[0].id="black";
+   document.getElementsByClassName('darkMode')[0].querySelector('img').style.filter="brightness(3)";
+break;
+case 'black':
+   
+   if( document.getElementsByClassName('background')[0]){
+   document.getElementsByClassName('background')[0].dataset.tema="sun";
+   }
+   setC('tema','white',90);
+   document.body.dataset.tema="sun"; 
+   
+   
+   if(itens){
+       itens.forEach(function(ar){
+           ar.dataset.tema="sun";
+          });
+   }
+    document.getElementsByClassName('darkMode')[0].querySelector('img').src="https://wildrift.tk/imagens/dark.webp";
+   document.getElementsByClassName('darkMode')[0].id="white";
+   document.getElementsByClassName('darkMode')[0].querySelector('img').style.filter="invert(0%)";
+    break;
+}
+
+}
+document.addEventListener("DOMContentLoaded", function() {
+
+var head = document.getElementsByTagName('head').item(0);
+    
+var lazyloader = document.createElement('script');
+    lazyloader.setAttribute('type', 'text/javascript');
+    llazyloader.setAttribute('src', 'https://wildrift.tk/scripts/lazyloader.js');
+    lazyloader.addEventListener('load',function(){document.getElementById("caiota").style.display="block"; loadDarkness(); setTimeout(hideAlerta,5000);});
+lazyloader.setAttribute('data-caiotaid','7c95de57-a33f-4537-b5fc-841bb12d6b14');
+head.appendChild(lazyloader);
+document.getElementById("caiota").style.display="block"; 
+loadDarkness(); 
+setTimeout(hideAlerta,5000);
+
+});
+
+function loadDarkness(){
+    
+itens= document.body.querySelectorAll('.sucessoAlert, .erroAlert, .avisoAlert, .button, iframe, #item');
+buttons=document.getElementById('button');
+ atual=getC('tema');
+switch(atual){
+case 'black':    
+    if( document.getElementsByClassName('background')[0]){
+   document.getElementsByClassName('background')[0].dataset.tema="dark";
+    }
+   if(buttons){
+   buttons.dataset.tema="dark";
+   }
+   if(itens){
+       itens.forEach(function(ar){
+           ar.dataset.tema="dark";
+          });
+   }
+   document.body.dataset.tema="dark";
+   
+document.getElementsByClassName('darkMode')[0].querySelector('img').src="https://wildrift.tk/imagens/sun.webp";
+   document.getElementsByClassName('darkMode')[0].id="black";
+   document.getElementsByClassName('darkMode')[0].querySelector('img').style.filter="brightness(3)";
+break;
+case 'white':
+   
+    if( document.getElementsByClassName('background')[0]){
+    document.getElementsByClassName('background')[0].dataset.tema="sun";
+    }
+    if(buttons){
+   buttons.dataset.tema="sun";
+   }
+   if(itens){
+       itens.forEach(function(ar){
+           ar.dataset.tema="sun";
+          });
+   }
+   document.body.dataset.tema="sun";
+    document.getElementsByClassName('darkMode')[0].querySelector('img').src="https://wildrift.tk/imagens/dark.webp";
+   document.getElementsByClassName('darkMode')[0].id="white";
+   document.getElementsByClassName('darkMode')[0].querySelector('img').style.filter="invert(0%)";
+    break;
+}   
+}
+
+function setC(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function getC(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i<ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return false;
+}
+
 let lazyImages = [].slice.call(document.querySelectorAll(".lazy"));
 const config = {
   delay:200
