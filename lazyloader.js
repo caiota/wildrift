@@ -156,6 +156,9 @@ function getC(cname) {
   return false;
 }
 
+
+
+
 let lazyImages = [].slice.call(document.querySelectorAll(".lazy"));
 const config = {
   delay:200
