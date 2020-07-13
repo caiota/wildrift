@@ -73,21 +73,7 @@ case 'black':
 }
 
 }
-document.addEventListener("DOMContentLoaded", function() {
 
-var head = document.getElementsByTagName('head').item(0);
-    
-var lazyloader = document.createElement('script');
-    lazyloader.setAttribute('type', 'text/javascript');
-    llazyloader.setAttribute('src', 'https://wildrift.tk/scripts/lazyloader.js');
-    lazyloader.addEventListener('load',function(){document.getElementById("caiota").style.display="block"; loadDarkness(); setTimeout(hideAlerta,5000);});
-lazyloader.setAttribute('data-caiotaid','7c95de57-a33f-4537-b5fc-841bb12d6b14');
-head.appendChild(lazyloader);
-document.getElementById("caiota").style.display="block"; 
-loadDarkness(); 
-setTimeout(hideAlerta,5000);
-
-});
 
 function loadDarkness(){
     
@@ -315,7 +301,7 @@ function loadCss() {
 		css = document.createElement('link');
 		css.setAttribute('type', 'text/css');
 		css.setAttribute('rel', 'stylesheet');
-		css.setAttribute('href', 'https://wildrift.tk/css/index.css');
+		css.setAttribute('href', 'https://cdn.jsdelivr.net/gh/caiota/wildrift/index.min.css');
 		head.appendChild(css);
 		clearAlerts= setInterval(clearLayout,1000);
 		if (document.getElementById('loadAlerta')) {
