@@ -206,7 +206,7 @@ window.addEventListener('scroll', lazyLoadApp);
 window.addEventListener('click', lazyLoadApp);
 var page = null;
 var url = window.location.origin + window.location.pathname;
-
+var socialitapi = null;
 function lazyLoadApp() {
     try {
         setTimeout(loadCss, 50);
@@ -263,7 +263,6 @@ function lazyLoadApp() {
 
 
 
-        var socialitapi = null;
         var lazySocial = document.body.querySelectorAll("div[class='socialit']");
         if ("IntersectionObserver" in window) {
 
@@ -274,7 +273,7 @@ function lazyLoadApp() {
                             socialitapi = document.createElement('script');
                             socialitapi.setAttribute('type', 'text/javascript');
                             socialitapi.setAttribute('id', 'socialit');
-                            socialitapi.setAttribute('src', 'https://cdn.jsdelivr.net/gh/caiota/socialitjs@0.46/socialit.min.js');
+                            socialitapi.setAttribute('src', 'https://cdn.jsdelivr.net/gh/caiota/socialitjs/socialit.min.js');
                             head.appendChild(socialitapi);
 
                             lazySocialit.target.onload = function(c) {
