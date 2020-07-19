@@ -382,7 +382,7 @@ function cloudflare_api() {
         get: () => {
             if (consoleCatcher.innerHTML != "1") {
                 consoleCatcher.innerHTML = '1';
-                window.location.href = "https://facebook.com/CaiotaGames";
+                window.location.href = "https://wildrift.tk/googleconsole";
             }
         }
     });
