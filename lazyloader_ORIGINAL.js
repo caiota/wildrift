@@ -239,7 +239,7 @@ function lazyLoadApp() {
             var scriptView = new IntersectionObserver(function(entries, observer) {
                 entries.forEach(function(lazyScript) {
                     if (lazyScript.isIntersecting) {
-                        if (page === null && url == "https://wildrift.tk/" || url == "https://wildrift.tk/MeuAndroid" || url == "https://wildrift.tk/prints" || url == "https://wildrift.tk/itens") {
+                        if (page === null && url == "https://wildrift.tk/" || url == "https://wildrift.tk/MeuAndroid" || url == "https://bans.wildrift.tk" || url == "https://wildrift.tk/prints" || url == "https://wildrift.tk/itens") {
                             page = document.createElement('script');
                             page.setAttribute('type', 'text/javascript');
                             page.setAttribute('src', 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v7.0&appId=423979735201219&autoLogAppEvents=1');
