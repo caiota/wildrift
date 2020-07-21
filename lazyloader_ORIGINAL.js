@@ -157,7 +157,8 @@ if ("IntersectionObserver" in window) {
         entries.forEach(function(lazyImage) {
             if (lazyImage.isIntersecting) {
                 if (!lazyImage.target.src || lazyImage.target.src == '(unknown)' && lazyImage.target.classList != "LazyLoaded") {
-                    lazyImage.target.src = lazyImage.target.dataset.srcset + "?hashKey=otavalve";
+                    
+                    lazyImage.target.setAttribute('src',lazyImage.target.dataset.srcset);
                     lazyImage.target.onload = function(c) {
                         c.target.classList.remove("lazy");
                         c.target.classList.remove("LazyLoading");
