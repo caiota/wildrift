@@ -300,7 +300,7 @@ function lazyLoadApp() {
 var css = null;
 var clearAlerts = "notNull";
 
-function loadCss() {.
+function loadCss() {
     if (css === null) {
         css = document.createElement('link');
         css.setAttribute('type', 'text/css');
