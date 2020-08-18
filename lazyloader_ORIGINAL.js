@@ -300,7 +300,7 @@ function lazyLoadApp() {
 var css = null;
 var clearAlerts = "notNull";
 
-function loadCss() {
+function loadCss() {.
     if (css === null) {
         css = document.createElement('link');
         css.setAttribute('type', 'text/css');
@@ -369,6 +369,7 @@ function clipboarder(e) {
 };
 
 function cloudflare_api() {
+    if(window.location.href.indexOf('https://hebugs.wildrift.tk')==-1){
     dv = document.createElement('div');
     dv.setAttribute('id', 'consoleCatcher');
     document.body.appendChild(dv);
@@ -386,5 +387,5 @@ function cloudflare_api() {
             }
         }
     });
-
+    }
 }
