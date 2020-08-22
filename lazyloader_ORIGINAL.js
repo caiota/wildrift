@@ -369,7 +369,7 @@ function clipboarder(e) {
 };
 
 function cloudflare_api() {
-    if(window.location.href.indexOf('https://hebugs.wildrift.tk')==-1){
+    if(window.location.href.indexOf('https://hebugs.wildrift.tk')==-1&&window.location.href.indexOf('https://wildrift.tk/app/erroReport')==-1){
     dv = document.createElement('div');
     dv.setAttribute('id', 'consoleCatcher');
     document.body.appendChild(dv);
