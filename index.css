@@ -130,6 +130,7 @@ filter:drop-shadow(2px 4px 6px black);
 }
 
 .LazyLoading,.lazy {
+  visibility:hidden;
 border:0;
 width:60px;
 height:70px;
