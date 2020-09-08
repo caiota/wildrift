@@ -305,7 +305,7 @@ function loadCss() {
         css = document.createElement('link');
         css.setAttribute('type', 'text/css');
         css.setAttribute('rel', 'stylesheet');
-        css.setAttribute('href', 'https://cdn.jsdelivr.net/gh/caiota/wildrift/index.min.css');
+        css.setAttribute('href', 'https://cdn.jsdelivr.net/gh/caiota/wildrift@0.98/index.min.css');
         head.appendChild(css);
         clearAlerts = setInterval(clearLayout, 1000);
         if (document.getElementById('loadAlerta')) {
