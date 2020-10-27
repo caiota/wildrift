@@ -311,7 +311,7 @@ function loadCss() {
         if (document.getElementById('loadAlerta')) {
             document.getElementById('loadAlerta').style.display = 'none';
         }
-        setTimeout(getSecurity, 2000);
+        //setTimeout(getSecurity, 2000);
 
     }
 
