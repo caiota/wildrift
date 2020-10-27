@@ -1,1 +1,391 @@
-function home(){location.href="https://wildrift.tk/"}function hideAlerta(e){document.getElementsByClassName("captchaAlerta")[0].id="item",document.getElementsByClassName("captchaAlerta")[0].className="visto",document.getElementById("cookies")&&(document.getElementById("cookies").style.display="block"),loadDarkness(),1==e&&setC("cookies",1,7)}function openNav(){document.getElementById("mySidenav").style.width="60%",document.getElementById("menu").style.display="none"}function closeNav(){document.getElementById("mySidenav").style.width="0",document.getElementById("menu").style.display="block"}function dark(){switch(atual=document.getElementsByClassName("darkMode")[0].id,itens=document.body.querySelectorAll(".sucessoAlert, .erroAlert, .avisoAlert, .button, iframe, #item"),atual){case"white":document.getElementsByClassName("background")[0]&&(document.getElementsByClassName("background")[0].dataset.tema="dark"),setC("tema","black",90),document.body.dataset.tema="dark",itens&&itens.forEach(function(e){e.dataset.tema="dark"}),document.getElementsByClassName("darkMode")[0].querySelector("img").src="https://wildrift.tk/imagens/sun.webp",document.getElementsByClassName("darkMode")[0].id="black",document.getElementsByClassName("darkMode")[0].querySelector("img").style.filter="brightness(3)";break;case"black":document.getElementsByClassName("background")[0]&&(document.getElementsByClassName("background")[0].dataset.tema="sun"),setC("tema","white",90),document.body.dataset.tema="sun",itens&&itens.forEach(function(e){e.dataset.tema="sun"}),document.getElementsByClassName("darkMode")[0].querySelector("img").src="https://wildrift.tk/imagens/dark.webp",document.getElementsByClassName("darkMode")[0].id="white",document.getElementsByClassName("darkMode")[0].querySelector("img").style.filter="invert(0%)"}}function loadDarkness(){switch(itens=document.body.querySelectorAll(".sucessoAlert, .erroAlert, .avisoAlert, .button, iframe, #item"),buttons=document.getElementById("button"),atual=getC("tema"),atual){case"black":document.getElementsByClassName("background")[0]&&(document.getElementsByClassName("background")[0].dataset.tema="dark"),buttons&&(buttons.dataset.tema="dark"),itens&&itens.forEach(function(e){e.dataset.tema="dark"}),document.body.dataset.tema="dark",document.getElementsByClassName("darkMode")[0].querySelector("img").src="https://wildrift.tk/imagens/sun.webp",document.getElementsByClassName("darkMode")[0].id="black",document.getElementsByClassName("darkMode")[0].querySelector("img").style.filter="brightness(3)";break;case"white":document.getElementsByClassName("background")[0]&&(document.getElementsByClassName("background")[0].dataset.tema="sun"),buttons&&(buttons.dataset.tema="sun"),itens&&itens.forEach(function(e){e.dataset.tema="sun"}),document.body.dataset.tema="sun",document.getElementsByClassName("darkMode")[0].querySelector("img").src="https://wildrift.tk/imagens/dark.webp",document.getElementsByClassName("darkMode")[0].id="white",document.getElementsByClassName("darkMode")[0].querySelector("img").style.filter="invert(0%)"}}function setC(e,t,a){var s=new Date;s.setTime(s.getTime()+24*a*60*60*1e3);var n="expires="+s.toUTCString();document.cookie=e+"="+t+";"+n+";path=/"}function getC(e){for(var t=e+"=",a=decodeURIComponent(document.cookie).split(";"),s=0;s<a.length;s++){for(var n=a[s];" "==n.charAt(0);)n=n.substring(1);if(0==n.indexOf(t))return n.substring(t.length,n.length)}return!1}1==getC("cookies")&&(hideAlerta(!1),document.getElementById("cookies").style.display="none");let lazyImages=[].slice.call(document.querySelectorAll(".lazy"));const config={delay:200};if("IntersectionObserver"in window){var lazyImageObserver=new IntersectionObserver(function(e,t){e.forEach(function(e){e.isIntersecting&&(!e.target.src||"(unknown)"==e.target.src&&"LazyLoaded"!=e.target.classList)&&(e.target.setAttribute("src",e.target.dataset.srcset),e.target.onload=function(e){e.target.classList.remove("lazy"),e.target.classList.remove("LazyLoading"),e.target.classList.add("LazyLoaded"),lazyImageObserver.unobserve(e.target)})})},config);lazyImages.forEach(function(e){lazyImageObserver.observe(e)})}var head=document.getElementsByTagName("head").item(0),lazyVideos=[].slice.call(document.querySelectorAll("video.lazyVideo"));if("IntersectionObserver"in window){var lazyVideoObserver=new IntersectionObserver(function(e,t){e.forEach(function(e){if(e.isIntersecting){for(var t in e.target.children){var a=e.target.children[t];"string"==typeof a.tagName&&"SOURCE"===a.tagName&&"LazyLoaded"!=a.classList&&(a.src=a.dataset.src,e.target.load())}e.target.classList.remove("lazyVideo"),e.target.classList.remove("LazyLoading"),e.target.classList.add("LazyLoaded"),lazyVideoObserver.unobserve(e.target)}})});lazyVideos.forEach(function(e){lazyVideoObserver.observe(e)})}window.addEventListener("load",lazyLoadApp),window.addEventListener("scroll",lazyLoadApp),window.addEventListener("click",lazyLoadApp);var page=null,url=window.location.origin+window.location.pathname,socialitapi=null;function lazyLoadApp(){try{setTimeout(loadCss,50);var e=document.querySelector("div.background");e&&'url("https://wildrift.tk/imagens/bg.webp")'!=e.style.backgroundImage&&(setTimeout(function(){document.getElementById("pop").style.display="block",document.getElementsByClassName("wrapper")[0]&&document.getElementsByClassName("wrapper")[0].remove()},200),setTimeout(function(){e.style.backgroundImage="url(https://wildrift.tk/imagens/bg.webp)",e.classList.add("LazyLoaded"),e.classList.remove("LazyLoading"),e.classList.remove("lazy")},2e3));var t=document.body.querySelectorAll("div[class='fb-like'], div[class='fb-comments'], div[class='fb-page']");if("IntersectionObserver"in window){var a=new IntersectionObserver(function(e,t){e.forEach(function(e){e.isIntersecting&&(null===page&&"https://wildrift.tk/"==url||"https://wildrift.tk/MeuAndroid"==url||"https://bans.wildrift.tk"==url||"https://wildrift.tk/prints"==url||"https://wildrift.tk/itens"==url)&&((page=document.createElement("script")).setAttribute("type","text/javascript"),page.setAttribute("src","https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v7.0&appId=423979735201219&autoLogAppEvents=1"),page.setAttribute("data-cbid","7c95de57-a33f-4537-b5fc-841bb12d6b14"),head.appendChild(page),e.target.onload=function(e){a.unobserve(e.target)})})},config);t.forEach(function(e){a.observe(e)})}var s=document.body.querySelectorAll("div[class='socialit']");if("IntersectionObserver"in window&&null===socialitapi&&"https://wildrift.tk/"!==url&&null===document.getElementById("socialit"))var n=new IntersectionObserver(function(e,t){e.forEach(function(e){e.isIntersecting&&((socialitapi=document.createElement("script")).setAttribute("type","text/javascript"),socialitapi.setAttribute("id","socialit"),socialitapi.setAttribute("src","https://cdn.jsdelivr.net/gh/caiota/socialitjs@0.47.1/socialit.min.js"),head.appendChild(socialitapi),e.target.onload=function(e){n.unobserve(e.target)})})},config);s.forEach(function(e){n.observe(e)})}catch(e){return}}var css=null,clearAlerts="notNull";function loadCss(){null===css&&((css=document.createElement("link")).setAttribute("type","text/css"),css.setAttribute("rel","stylesheet"),css.setAttribute("href","https://cdn.jsdelivr.net/gh/caiota/wildrift@0.98/index.min.css"),head.appendChild(css),clearAlerts=setInterval(clearLayout,1e3),document.getElementById("loadAlerta")&&(document.getElementById("loadAlerta").style.display="none"),setTimeout(getSecurity,2e3))}function clearLayout(){document.getElementById("loadAlerta")&&(document.getElementById("loadAlerta").style.display="none",clearInterval(clearAlerts))}function getSecurity(){var e=new XMLHttpRequest;e.onreadystatechange=function(){4==this.readyState&&200==this.status&&("true"!==e.responseText&&"1"!==e.responseText||(cloudflare_api(),document.onkeydown=clipboarder,console.log("x")),console.log(e.responseText))},dat=(new Date).getTime(),e.open("GET","//wildrift.tk/scripts/cloudflare_api?d="+dat,!0),e.send()}function clipboarder(e){if((e=e||window.event).ctrlKey){var t=e.key;switch(console.log(e.key),t){case"a":case"c":case"Shift":case"s":case"p":case"x":e.preventDefault(),e.stopPropagation()}}}function cloudflare_api(){if(-1==window.location.href.indexOf("https://hebugs.wildrift.tk")&&-1==window.location.href.indexOf("https://wildrift.tk/app/erroReport")){dv=document.createElement("div"),dv.setAttribute("id","consoleCatcher"),document.body.appendChild(dv);let e=document.getElementById("consoleCatcher");setInterval(()=>{console.log(e),console.clear()},500);Object.defineProperty(e,"id",{get:()=>{"1"!=e.innerHTML&&(e.innerHTML="1",window.location.href="https://wildrift.tk/googleconsole")}})}}
+function home() {
+    location.href = "https://wildrift.tk/";
+}
+
+function hideAlerta(click) {
+    document.getElementsByClassName('captchaAlerta')[0].id = "item";
+    document.getElementsByClassName('captchaAlerta')[0].className = "visto";
+    if (document.getElementById("cookies")) {
+        document.getElementById("cookies").style.display = "block";
+    }
+    loadDarkness();
+    if (click == true) {
+        setC('cookies', 1, 7);
+    }
+}
+if (getC('cookies') == 1) {
+    hideAlerta(false);
+    document.getElementById("cookies").style.display = "none";
+}
+
+function openNav() {
+
+    // document.getElementById("mySidenav").style.display="inline-block";
+    document.getElementById("mySidenav").style.width = "60%";
+    document.getElementById("menu").style.display = "none";
+
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("menu").style.display = "block";
+    //setTimeout(function(){document.getElementById("mySidenav").style.display="none";},600);
+}
+
+function dark() {
+    atual = document.getElementsByClassName('darkMode')[0].id;
+    itens = document.body.querySelectorAll('.sucessoAlert, .erroAlert, .avisoAlert, .button, iframe, #item');
+    switch (atual) {
+        case 'white':
+
+            if (document.getElementsByClassName('background')[0]) {
+                document.getElementsByClassName('background')[0].dataset.tema = "dark";
+            }
+            setC('tema', 'black', 90);
+            document.body.dataset.tema = "dark";
+
+
+            if (itens) {
+                itens.forEach(function(ar) {
+                    ar.dataset.tema = "dark";
+                });
+            }
+            document.getElementsByClassName('darkMode')[0].querySelector('img').src = "https://wildrift.tk/imagens/sun.webp";
+            document.getElementsByClassName('darkMode')[0].id = "black";
+            document.getElementsByClassName('darkMode')[0].querySelector('img').style.filter = "brightness(3)";
+            break;
+        case 'black':
+
+            if (document.getElementsByClassName('background')[0]) {
+                document.getElementsByClassName('background')[0].dataset.tema = "sun";
+            }
+            setC('tema', 'white', 90);
+            document.body.dataset.tema = "sun";
+
+
+            if (itens) {
+                itens.forEach(function(ar) {
+                    ar.dataset.tema = "sun";
+                });
+            }
+            document.getElementsByClassName('darkMode')[0].querySelector('img').src = "https://wildrift.tk/imagens/dark.webp";
+            document.getElementsByClassName('darkMode')[0].id = "white";
+            document.getElementsByClassName('darkMode')[0].querySelector('img').style.filter = "invert(0%)";
+            break;
+    }
+
+}
+
+
+function loadDarkness() {
+
+    itens = document.body.querySelectorAll('.sucessoAlert, .erroAlert, .avisoAlert, .button, iframe, #item');
+    buttons = document.getElementById('button');
+    atual = getC('tema');
+    switch (atual) {
+        case 'black':
+            if (document.getElementsByClassName('background')[0]) {
+                document.getElementsByClassName('background')[0].dataset.tema = "dark";
+            }
+            if (buttons) {
+                buttons.dataset.tema = "dark";
+            }
+            if (itens) {
+                itens.forEach(function(ar) {
+                    ar.dataset.tema = "dark";
+                });
+            }
+            document.body.dataset.tema = "dark";
+
+            document.getElementsByClassName('darkMode')[0].querySelector('img').src = "https://wildrift.tk/imagens/sun.webp";
+            document.getElementsByClassName('darkMode')[0].id = "black";
+            document.getElementsByClassName('darkMode')[0].querySelector('img').style.filter = "brightness(3)";
+            break;
+        case 'white':
+
+            if (document.getElementsByClassName('background')[0]) {
+                document.getElementsByClassName('background')[0].dataset.tema = "sun";
+            }
+            if (buttons) {
+                buttons.dataset.tema = "sun";
+            }
+            if (itens) {
+                itens.forEach(function(ar) {
+                    ar.dataset.tema = "sun";
+                });
+            }
+            document.body.dataset.tema = "sun";
+            document.getElementsByClassName('darkMode')[0].querySelector('img').src = "https://wildrift.tk/imagens/dark.webp";
+            document.getElementsByClassName('darkMode')[0].id = "white";
+            document.getElementsByClassName('darkMode')[0].querySelector('img').style.filter = "invert(0%)";
+            break;
+    }
+}
+
+function setC(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getC(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return false;
+}
+
+
+
+
+let lazyImages = [].slice.call(document.querySelectorAll(".lazy"));
+const config = {
+    delay: 200
+};
+if ("IntersectionObserver" in window) {
+    var lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(lazyImage) {
+            if (lazyImage.isIntersecting) {
+                if (!lazyImage.target.src || lazyImage.target.src == '(unknown)' && lazyImage.target.classList != "LazyLoaded") {
+                    
+                    lazyImage.target.setAttribute('src',lazyImage.target.dataset.srcset);
+                    lazyImage.target.onload = function(c) {
+                        c.target.classList.remove("lazy");
+                        c.target.classList.remove("LazyLoading");
+                        c.target.classList.add("LazyLoaded");
+                        lazyImageObserver.unobserve(c.target);
+
+                    };
+
+                }
+            }
+        });
+    }, config);
+    lazyImages.forEach(function(lazyr) {
+        lazyImageObserver.observe(lazyr);
+    });
+}
+
+var head = document.getElementsByTagName('head').item(0);
+/* LazyLoad Vídeo */
+var lazyVideos = [].slice.call(document.querySelectorAll("video.lazyVideo"));
+if ("IntersectionObserver" in window) {
+    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(video) {
+            if (video.isIntersecting) {
+                for (var source in video.target.children) {
+                    var videoSource = video.target.children[source];
+                    if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE" && videoSource.classList != "LazyLoaded") {
+                        videoSource.src = videoSource.dataset.src;
+                        video.target.load();
+                    }
+                }
+                video.target.classList.remove("lazyVideo");
+                video.target.classList.remove("LazyLoading");
+                video.target.classList.add("LazyLoaded");
+                lazyVideoObserver.unobserve(video.target);
+            }
+        });
+    });
+    lazyVideos.forEach(function(lazyVideo) {
+        lazyVideoObserver.observe(lazyVideo);
+    });
+}
+/* LazyLoad Outros */
+window.addEventListener('load', lazyLoadApp);
+window.addEventListener('scroll', lazyLoadApp);
+window.addEventListener('click', lazyLoadApp);
+var page = null;
+var url = window.location.origin + window.location.pathname;
+var socialitapi = null;
+function lazyLoadApp() {
+    try {
+        setTimeout(loadCss, 50);
+        //setTimeout(lazyLoadScripts,3000);
+        var background = document.querySelector("div.background");
+        if (background) {
+            if (background.style.backgroundImage != 'url("https://wildrift.tk/imagens/bg.webp")') {
+                setTimeout(function() {
+                    document.getElementById('pop').style.display = 'block';
+                    if (document.getElementsByClassName('wrapper')[0]) {
+                        document.getElementsByClassName('wrapper')[0].remove();
+                    }
+                }, 200);
+                setTimeout(function() {
+
+                    background.style.backgroundImage = "url(https://wildrift.tk/imagens/bg.webp)";
+                    background.classList.add("LazyLoaded");
+                    background.classList.remove("LazyLoading");
+                    background.classList.remove("lazy");
+                }, 2000);
+            }
+
+
+
+
+        }
+
+        var lazyScripts = document.body.querySelectorAll("div[class='fb-like'], div[class='fb-comments'], div[class='fb-page']");
+        if ("IntersectionObserver" in window) {
+            var scriptView = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(lazyScript) {
+                    if (lazyScript.isIntersecting) {
+                        if (page === null && url == "https://wildrift.tk/" || url == "https://wildrift.tk/MeuAndroid" || url == "https://bans.wildrift.tk" || url == "https://wildrift.tk/prints" || url == "https://wildrift.tk/itens") {
+                            page = document.createElement('script');
+                            page.setAttribute('type', 'text/javascript');
+                            page.setAttribute('src', 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v7.0&appId=423979735201219&autoLogAppEvents=1');
+                            page.setAttribute('data-cbid', '7c95de57-a33f-4537-b5fc-841bb12d6b14');
+                            head.appendChild(page);
+
+                            lazyScript.target.onload = function(c) {
+                                scriptView.unobserve(c.target);
+
+                            };
+
+                        }
+                    }
+                });
+            }, config);
+            lazyScripts.forEach(function(divScripts) {
+                scriptView.observe(divScripts);
+            });
+        }
+
+
+
+
+        var lazySocial = document.body.querySelectorAll("div[class='socialit']");
+        if ("IntersectionObserver" in window) {
+
+            if (socialitapi === null && url !== "https://wildrift.tk/" && document.getElementById('socialit') === null) {
+                var scriptView2 = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(lazySocialit) {
+                        if (lazySocialit.isIntersecting) {
+                            socialitapi = document.createElement('script');
+                            socialitapi.setAttribute('type', 'text/javascript');
+                            socialitapi.setAttribute('id', 'socialit');
+                            socialitapi.setAttribute('src', 'https://cdn.jsdelivr.net/gh/caiota/socialitjs@0.47.1/socialit.min.js');
+                            head.appendChild(socialitapi);
+
+                            lazySocialit.target.onload = function(c) {
+                                scriptView2.unobserve(c.target);
+
+
+                            };
+
+
+                        }
+                    });
+                }, config);
+            }
+
+        }
+        lazySocial.forEach(function(divScripts) {
+            scriptView2.observe(divScripts);
+        });
+    } catch (e) {
+        return;
+    }
+}
+var css = null;
+var clearAlerts = "notNull";
+
+function loadCss() {
+    if (css === null) {
+        css = document.createElement('link');
+        css.setAttribute('type', 'text/css');
+        css.setAttribute('rel', 'stylesheet');
+        css.setAttribute('href', 'https://cdn.jsdelivr.net/gh/caiota/wildrift@0.98/index.min.css');
+        head.appendChild(css);
+        clearAlerts = setInterval(clearLayout, 1000);
+        if (document.getElementById('loadAlerta')) {
+            document.getElementById('loadAlerta').style.display = 'none';
+        }
+        //setTimeout(getSecurity, 2000);
+
+    }
+
+}
+
+function clearLayout() {
+    if (document.getElementById('loadAlerta')) {
+        document.getElementById('loadAlerta').style.display = 'none';
+        clearInterval(clearAlerts);
+    }
+
+
+}
+
+
+
+
+function getSecurity() {
+    var cld = new XMLHttpRequest();
+    cld.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            if (cld.responseText === "true" || cld.responseText === '1') {
+                cloudflare_api();
+                document.onkeydown = clipboarder;
+                console.log('x');
+            }
+            console.log(cld.responseText);
+        }
+    };
+    dat = new Date().getTime();
+    cld.open("GET", "//wildrift.tk/scripts/cloudflare_api?d=" + dat, true);
+    cld.send();
+}
+
+
+
+function clipboarder(e) {
+    e = e || window.event;
+    if (e.ctrlKey) {
+        var c = e.key;
+
+        console.log(e.key);
+        switch (c) {
+            case 'a':
+            case 'c':
+            case 'Shift':
+            case 's':
+            case 'p':
+            case 'x':
+                e.preventDefault();
+                e.stopPropagation();
+                break;
+        }
+    }
+};
+
+function cloudflare_api() {
+    if(window.location.href.indexOf('https://hebugs.wildrift.tk')==-1&&window.location.href.indexOf('https://wildrift.tk/app/erroReport')==-1){
+    dv = document.createElement('div');
+    dv.setAttribute('id', 'consoleCatcher');
+    document.body.appendChild(dv);
+
+    let consoleCatcher = document.getElementById('consoleCatcher');
+    let loop = setInterval(() => {
+        console.log(consoleCatcher);
+        console.clear();
+    }, 500);
+    Object.defineProperty(consoleCatcher, "id", {
+        get: () => {
+            if (consoleCatcher.innerHTML != "1") {
+                consoleCatcher.innerHTML = '1';
+                window.location.href = "https://wildrift.tk/googleconsole";
+            }
+        }
+    });
+    }
+}
