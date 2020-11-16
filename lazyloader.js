@@ -210,7 +210,8 @@ var url = window.location.origin + window.location.pathname;
 var socialitapi = null;
 function lazyLoadApp() {
     try {
-        setTimeout(loadCss, 50);
+        
+        clearAlerts = setInterval(clearLayout, 1000);
         //setTimeout(lazyLoadScripts,3000);
         var background = document.querySelector("div.background");
         if (background) {
@@ -297,25 +298,8 @@ function lazyLoadApp() {
         return;
     }
 }
-var css = null;
 var clearAlerts = "notNull";
 
-function loadCss() {
-    if (css === null) {
-        css = document.createElement('link');
-        css.setAttribute('type', 'text/css');
-        css.setAttribute('rel', 'stylesheet');
-        css.setAttribute('href', 'https://cdn.jsdelivr.net/gh/caiota/wildrift@0.98/index.min.css');
-        head.appendChild(css);
-        clearAlerts = setInterval(clearLayout, 1000);
-        if (document.getElementById('loadAlerta')) {
-            document.getElementById('loadAlerta').style.display = 'none';
-        }
-        //setTimeout(getSecurity, 2000);
-
-    }
-
-}
 
 function clearLayout() {
     if (document.getElementById('loadAlerta')) {
